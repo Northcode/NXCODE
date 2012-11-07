@@ -1,0 +1,6 @@
+﻿NXE HEADER
+Program Name
+Author
+Label XML Data
+Class XML
+BYTECODE

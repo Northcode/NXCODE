@@ -1,0 +1,51 @@
+﻿
+func main
+	push "Hello World"
+	stloc hello
+	ldloc hello
+	sysf_print
+
+	push 2
+	push 2
+	add
+	stloc sum
+
+	push "Hello "
+	push "World"
+	str_concat
+	stloc helloworld
+
+	thread run2
+	stloc TH2
+	ldloc TH2
+	threadstart
+
+end
+
+func run2
+	push 0
+	stloc a
+	:A
+	ldloc a
+	push 10
+	jls E
+
+	push "HELLO!"
+	sysf_print
+
+	jmp A
+	:E
+
+end
+
+class TestClass
+	var Name
+	var Type
+
+	func TestFunc
+		ldloc Type
+		ldloc Name
+		sysf_println
+		sysf_println
+	end
+end
